@@ -74,7 +74,7 @@ class ReceiptController extends Controller
             foreach ($debits as $index => $debit) {
                 $debits[$index]['receipt_id'] = $id;
             }
-            DebitAccount::insert($costs);
+            DebitAccount::insert($debits);
         }
 
         return response()->json(['message' => 'تم اضافه السند  بنجاح'], 200);

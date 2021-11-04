@@ -30,7 +30,7 @@ class ReceiptFactory extends Factory
             'bank_name' => $this->faker->randomElement(['بنك 1','بنك 2']),
             'check_number' => $this->faker->randomDigit(),
             'total_amount' => rand(1001,5000),
-            'total-tax' => rand(10,50),
+            'total_tax' => rand(10,50),
             'sub_total' => rand(999,5875),
             'supplier_name' => $this->faker->company(),
             'supplier_no' => $this->faker->randomDigit(),

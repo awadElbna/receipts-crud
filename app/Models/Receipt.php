@@ -22,7 +22,7 @@ class Receipt extends Model
         'bank_name',
         'check_number',
         'total_amount',
-        'total-tax',
+        'total_tax',
         'sub_total',
         'supplier_name',
         'supplier_no',

@@ -29,7 +29,7 @@ class CreateReceiptsTable extends Migration
 
 
             $table->double('total_amount',11,2);
-            $table->double('total-tax',11,2);
+            $table->double('total_tax',11,2)->default(0);
             $table->double('sub_total',11,2);
 
 

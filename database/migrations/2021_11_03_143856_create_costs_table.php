@@ -17,9 +17,7 @@ class CreateCostsTable extends Migration
             $table->id();
             $table->text('center');
             $table->string('ratio');
-
             $table->string('value')->nullable();
-
             $table->foreignId('receipt_id')->references('id')->on('receipts');
             $table->timestamps();
         });

@@ -36,6 +36,8 @@ class ReceiptRequest extends FormRequest
             'bank_name' => 'nullable',
             'check_number' => 'required_if:receipt_type,==,شيك',
             'total_amount' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'sub_total' => 'required|regex:/^\d+(\.\d{1,2})?$/',
+            'total_tax' => 'required|regex:/^\d+(\.\d{1,2})?$/',
             'supplier_name' => 'required_with:spacial_params',
             'supplier_no' => 'required_with:spacial_params',
             'tax_number' => 'required_with:spacial_params',

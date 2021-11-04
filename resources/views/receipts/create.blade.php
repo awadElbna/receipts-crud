@@ -363,7 +363,7 @@
         $('#debit-plus').on('click', function (e) {
             e.preventDefault();
             var debitHtml = '<tr>' +
-                '<td ><select class="form-control" name="debit[1][name]"><option value="مصروفات عامه">مصروفات عامه</option><option value="مصروفات نثريه">مصروفات نثريه</option><option value="مصروفات اخرى">مصروفات اخرى</option></select></td>' +
+                '<td ><select class="form-control" name="debit['+ y +'][name]"><option value="مصروفات عامه">مصروفات عامه</option><option value="مصروفات نثريه">مصروفات نثريه</option><option value="مصروفات اخرى">مصروفات اخرى</option></select></td>' +
                 '<td><input type="text" name="debit[' + y + '][amount]" class="form-control add-to-total"></td>' +
                 '<td><select class="form-control" name="debit[' + y + '][currency]"><option value="الجنيه">الجنيه</option><option value="الريال">الريال</option><option value="الدرهم">الدرهم</option></select></td>' +
                 '<td><select class="form-control change-tax" name="debit[' + y + '][tax]"><option value="0">0 %</option> <option value="10">10 %</option> <option value="14">14%</option> </select> </td>' +
@@ -386,6 +386,7 @@
         });
 
         $('#costcenter').change(function () {
+            $('.cost-center input').val("");
                 $('.cost-center').toggleClass('d-none');
 
             }
