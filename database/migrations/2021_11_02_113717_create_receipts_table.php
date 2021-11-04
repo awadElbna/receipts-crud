@@ -29,7 +29,9 @@ class CreateReceiptsTable extends Migration
 
 
             $table->double('total_amount',11,2);
-            $table->string('currency');
+            $table->double('total-tax',11,2);
+            $table->double('sub_total',11,2);
+
 
             $table->string('supplier_name')->nullable();
             $table->integer('supplier_no')->nullable();
